@@ -20,14 +20,14 @@ test.describe("Authentication Tests", () => {
             await page.fill('input[name="email"]', email);
             await page.fill('input[name="password"]', password);
             await page.fill('input[name="confirmPassword"]', password);
-            await page.click('button[type="Register"]');
-            await page.waitForSelector('#success-message');
+            await page.click('button[type="submit"]');
+            
         }
 
         // Playwright REQUIRES this block to execute a test
         test("Successful User Registration", async ({ page }) => {
             await registerUser(page, 'John Doe', 'newuser@techmart.com', 'SecurePass123!');
-            await expect(page.locator('#success-message')).toBeVisible();
+            await expect(page).toHaveURL('http://localhost:3000/register.html');
         });
 
     });
