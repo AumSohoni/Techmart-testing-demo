@@ -846,3 +846,41 @@ Low Priority (Score < 20):
 For questions or updates to this plan, contact: QA Manager  
 Last Review Date: August 18, 2024  
 Next Review Date: [To be set after testing begins]
+
+---
+
+## EXECUTION GOVERNANCE AND AUDIT TRAIL
+
+This section defines how testing activity is recorded so authorship and effort are clear.
+
+### Required Execution Records
+
+| Record Type | Owner | Frequency | Stored In |
+|-------------|-------|-----------|-----------|
+| Manual test execution log | QA Engineer | Daily | MANUAL_TEST_CASES.md |
+| E2E run summary | QA Automation Engineer | Per run | PLAYWRIGHT_SETUP_GUIDE.md |
+| Defect updates | QA Team | As found/fixed | MANUAL_TEST_CASES.md bug section |
+| Weekly status rollup | QA Lead | Weekly | TEST_PLAN.md metrics section |
+
+### Traceability Rule
+
+Each QA commit should map to at least one of the following:
+
+- A specific test case range (example: TC-011 to TC-014)
+- A specific automation suite (example: auth/login.spec.ts)
+- A specific defect (example: BUG-003)
+
+### Commit Message Policy
+
+Use structured prefixes for easier review:
+
+- test(manual): for manual execution activity
+- test(e2e): for Playwright test changes
+- fix(app): for app bug fixes discovered during QA
+- docs(qa): for guide updates and evidence logs
+
+### Evidence Retention
+
+- Keep screenshots and videos for all failed tests.
+- Keep at least one successful artifact per critical flow.
+- Retain reports/logs for the latest 4 weekly cycles.

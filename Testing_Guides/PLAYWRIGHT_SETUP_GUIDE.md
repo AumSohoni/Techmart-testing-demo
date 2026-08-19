@@ -705,3 +705,40 @@ npm run test:report
 ---
 
 Good luck with your Playwright testing journey! 🎭
+
+---
+
+## Personal Automation Evidence (GitHub-Friendly)
+
+Use this section to show your own execution history with repeatable proof.
+
+### Run Log
+
+| Run ID | Date | Command | Total | Passed | Failed | Duration | Report Path |
+|--------|------|---------|-------|--------|--------|----------|-------------|
+| AT-001 | YYYY-MM-DD | npm test | 0 | 0 | 0 | 0m 00s | playwright-report/index.html |
+| AT-002 | YYYY-MM-DD | npm run test:headed | 0 | 0 | 0 | 0m 00s | playwright-report/index.html |
+
+### Evidence Checklist Per Run
+
+- Commit hash recorded for run
+- Terminal output captured
+- Playwright HTML report generated
+- Failed test screenshots reviewed
+- Root cause and fix noted in commit message
+
+### Recommended Commit Pattern
+
+Use one commit per meaningful QA action:
+
+- test(manual): execute auth test cases TC-001 to TC-005
+- test(e2e): add login negative path checks
+- fix(app): handle empty password validation error
+- docs(qa): update execution logs and evidence links
+
+### Reviewer Sign-Off
+
+| Name | Role | Date | Notes |
+|------|------|------|-------|
+| | QA Automation Engineer | | |
+| | Technical Reviewer | | |

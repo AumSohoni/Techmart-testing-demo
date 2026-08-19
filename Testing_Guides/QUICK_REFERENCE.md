@@ -520,3 +520,37 @@ After completing this roadmap, you should be able to:
 Created: August 18, 2024  
 Last Updated: August 18, 2024  
 Feedback: Share your learnings and help improve this guide
+
+---
+
+## GITHUB PROOF CHECKLIST (Show Your Own Work)
+
+Use this flow so your repository clearly demonstrates personal execution.
+
+### Daily Workflow
+
+1. Run manual or automated tests.
+2. Save evidence files (screenshots, logs, reports).
+3. Update MANUAL_TEST_CASES.md and TEST_PLAN.md with real outcomes.
+4. Commit with a specific message about what you tested or fixed.
+5. Push the same day.
+
+### Strong Commit Examples
+
+```bash
+git commit -m "test(manual): execute TC-006 to TC-010 and log outcomes"
+git commit -m "test(e2e): add cart quantity and remove item coverage"
+git commit -m "docs(qa): update risk notes and weekly execution metrics"
+```
+
+### Minimum Evidence Per Day
+
+- At least one test execution update in docs
+- At least one artifact (screenshot, log, or report)
+- At least one commit with a precise QA scope
+
+### Weekly Verification
+
+- Confirm commit history reflects daily activity
+- Confirm changed files match the commit message
+- Confirm reports and screenshots are present for failed scenarios

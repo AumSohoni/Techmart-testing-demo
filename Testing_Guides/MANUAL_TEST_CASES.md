@@ -517,3 +517,39 @@ Error message: "Password is required"
 8. **Test on mobile**: Different screen sizes and touch interactions
 9. **Test accessibility**: Use keyboard only (no mouse), test with screen reader
 10. **Think like a user**: Would a real user do this? What would confuse them?
+
+---
+
+## Personal Execution Evidence (Fill During Real Runs)
+
+Use this section to prove your own manual work with traceable artifacts.
+
+### Session Log
+
+| Session ID | Date | Start | End | Browser | Scope Tested | Cases Run | Pass | Fail | Blocked |
+|------------|------|-------|-----|---------|--------------|-----------|------|------|---------|
+| MT-001 | YYYY-MM-DD | HH:MM | HH:MM | Chrome | Auth | 0 | 0 | 0 | 0 |
+| MT-002 | YYYY-MM-DD | HH:MM | HH:MM | Firefox | Cart + Checkout | 0 | 0 | 0 | 0 |
+
+### Test Case Evidence Log
+
+| TC ID | Result | Date | Screenshot/Video Path | Bug ID (if fail) | Notes |
+|------|--------|------|------------------------|------------------|-------|
+| TC-001 | PASS/FAIL | YYYY-MM-DD | evidence/manual/TC-001.png | BUG-XXX | |
+| TC-002 | PASS/FAIL | YYYY-MM-DD | evidence/manual/TC-002.png | BUG-XXX | |
+| TC-003 | PASS/FAIL | YYYY-MM-DD | evidence/manual/TC-003.png | BUG-XXX | |
+| TC-004 | PASS/FAIL | YYYY-MM-DD | evidence/manual/TC-004.png | BUG-XXX | |
+| TC-005 | PASS/FAIL | YYYY-MM-DD | evidence/manual/TC-005.png | BUG-XXX | |
+
+### Evidence File Naming Standard
+
+- Manual screenshots: TC-XXX_step-YY_result.png
+- Manual recordings: TC-XXX_full-run.mp4
+- Console logs: TC-XXX_console.txt
+
+### Reviewer Sign-Off
+
+| Name | Role | Date | Notes |
+|------|------|------|-------|
+| | QA Executor | | |
+| | QA Reviewer | | |
