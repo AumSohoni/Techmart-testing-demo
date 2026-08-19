@@ -17,10 +17,10 @@ test.describe("Authentication Tests", () => {
         ) {
             await page.goto('http://localhost:3000/register.html');
             await page.fill('input[name="username"]', username); // or '#user-name';
-            await page.fill('input[name="email"]', 'newuser@techmart.com');
-            await page.fill('input[name="password"]', 'SecurePass123!');
-            await page.fill('input[name="confirm-password"]', 'SecurePass123!');
-            await page.click('button[type="submit"]');
+            await page.fill('input[name="email"]', email);
+            await page.fill('input[name="password"]', password);
+            await page.fill('input[name="confirm-password"]', password);
+            await page.click('button[type="Register"]');
             await page.waitForSelector('#success-message');
         }
 
