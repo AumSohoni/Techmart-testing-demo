@@ -20,7 +20,7 @@ This guide walks you through setting up a professional Playwright test automatio
 From your workspace root:
 ```bash
 cd software-testing-course
-mkdir -p tests/{e2e,pages,fixtures,utils}
+New-Item -ItemType Directory -Force Tests/e2e,Tests/pages,Tests/fixtures,Tests/utils
 npm init -y
 npm install -D @playwright/test @types/node typescript
 ```
