@@ -123,7 +123,7 @@ Error message displayed: "Invalid email or password."
 - User remains on login page
 - No sensitive error details leaked (doesn't say "password is wrong")
 
-**Status:** PASS / FAIL
+**Status:** PASS
 
 ---
 
@@ -439,6 +439,34 @@ Error message: "Password is required"
 
 ---
 
+### TC-019: Registration with Invalid Email Format
+
+| Field | Value |
+|-------|-------|
+| **Test Case ID** | TC-019 |
+| **Title** | Registration Fails with Invalid Email Format |
+
+**Steps:**
+1. Navigate to registration page
+2. Enter email: demo@te
+3. Enter password: SecurePass123!
+4. Enter confirm password: SecurePass123!
+5. Click Register button
+
+**Expected Result:** 
+- Error message displayed: "Invalid email format" (or equivalent validation message)
+- User remains on registration page
+- Account is not created
+
+**Actual Result:**
+- Registration succeeds with invalid email demo@te
+- User account is created
+- No validation error displayed
+
+**Status:** FAIL
+
+---
+
 ## Bug Report Template
 
 ### BUG-001: [Brief Description]
@@ -494,14 +522,15 @@ Error message: "Password is required"
 | TC-005 | Invalid Password | PASS | 2024-08-18 | - |
 | TC-006 | Add to Cart | FAIL | 2024-08-18 | Error msg not shown |
 | TC-007 | Multiple Items | PASS | 2024-08-18 | - |
+| TC-019 | Invalid Email Registration | FAIL | 2026-08-19 | Account created for invalid email format |
 | ... | ... | ... | ... | ... |
 
 **Summary:**
-- Total Test Cases: 18
+- Total Test Cases: 19
 - Passed: 16
-- Failed: 2
-- Pass Rate: 88.9%
-- Bugs Found: 2
+- Failed: 3
+- Pass Rate: 84.2%
+- Bugs Found: 3
 
 ---
 
