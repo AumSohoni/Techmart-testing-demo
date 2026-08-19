@@ -76,7 +76,7 @@ Error message displayed: "Email already registered. Please login or use a differ
 **Expected Result:** 
 Error message: "Passwords do not match."
 
-**Status:** PASS / FAIL
+**Status:** PASS
 
 ---
 
