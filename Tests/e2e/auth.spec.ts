@@ -16,10 +16,10 @@ test.describe("Authentication Tests", () => {
             password: string
         ) {
             await page.goto('http://localhost:3000/register.html');
-            await page.fill('input[name="username"]', username); // or '#user-name';
+            await page.fill('input[name="name"]', username);
             await page.fill('input[name="email"]', email);
             await page.fill('input[name="password"]', password);
-            await page.fill('input[name="confirm-password"]', password);
+            await page.fill('input[name="confirmPassword"]', password);
             await page.click('button[type="Register"]');
             await page.waitForSelector('#success-message');
         }
