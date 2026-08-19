@@ -28,9 +28,10 @@
 - No errors displayed
 
 **Actual Result:** 
-[To be filled during execution]
+- User redirected to HomePage
+- No errors displayed
 
-**Status:** PASS / FAIL
+**Status:** PASS 
 
 ---
 
@@ -54,7 +55,7 @@
 **Expected Result:** 
 Error message displayed: "Email already registered. Please login or use a different email."
 
-**Status:** PASS / FAIL
+**Status:** PASS 
 
 ---
 

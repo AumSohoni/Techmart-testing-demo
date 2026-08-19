@@ -258,6 +258,18 @@ npx tsc
 node script.js
 ```
 
+### Auto-Commit Watcher (GitHub)
+
+```powershell
+# From repository root (software-testing-course)
+powershell -ExecutionPolicy Bypass -File .\auto-commit.ps1 -Branch main
+```
+
+Notes:
+- Keeps watching files and auto-runs git add/commit/push after a short quiet period.
+- Keep that terminal open while you work.
+- Stop any time with Ctrl+C.
+
 ---
 
 ## 📋 COMMON TEST SCENARIOS
