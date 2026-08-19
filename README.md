@@ -1,4 +1,4 @@
-# TechMart Software Testing Portfolio
+# TechMart QA Automation Framework
 
 A structured QA project that demonstrates end-to-end software testing practice on a sample e-commerce application (TechMart).
 
