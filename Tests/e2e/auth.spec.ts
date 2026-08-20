@@ -32,4 +32,26 @@ test.describe("Authentication Tests", () => {
 
     });
 
+
+    test.describe("Login Tests", () => {
+
+        // Helper login function
+        async function loginUser(
+            page: Page, 
+            email: string, 
+            password: string
+        ) {
+            await page.goto('http://localhost:3000/login.html');
+            await page.fill('input[name="email"]', email);
+            await page.fill('input[name="password"]', password);
+            await page.click('button[type="submit"]');
+        }
+
+        test("Successful User Login", async ({ page }) => {
+            await loginUser(page, 'newuser@techmart.com', 'SecurePass123!');
+            await expect(page).toHaveURL('http://localhost:3000/dashboard.html');
+        });
+
+    });
+
 });
