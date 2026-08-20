@@ -35,7 +35,19 @@ test.describe("Authentication Tests", () => {
             await expect(page).toHaveURL('http://localhost:3000/register.html');
             await expect(page.locator('.error-message')).toHaveText('Email already registered');
         });
+        
+        test("password Mismatch During Registration", async ({ page }) => {
+            await page.goto('http://localhost:3000/register.html');
+            await page.fill('input[name="name"]', 'Alice Smith');
+            await page.fill('input[name="email"]', 'alice@techmart.com');               
+            await page.fill('input[name="password"]', 'Password123!');
+            await page.fill('input[name="confirmPassword"]', 'DifferentPassword123!');
+            await page.click('button[type="submit"]');
+            await expect(page).toHaveURL('http://localhost:3000/register.html');
+            await expect(page.locator('.error-message')).toHaveText('Passwords do not match');
+        });
 
+       
     });
 
 
@@ -61,6 +73,13 @@ test.describe("Authentication Tests", () => {
         test("Failed User Login with Incorrect Password", async ({ page }) => {
             await loginUser(page, 'demo@techmart.com', 'wrongpassword');
             await expect(page).toHaveURL('http://localhost:3000/login.html');
+        });
+
+        test("Logout Functionality", async ({ page }) => {
+            await page.goto('http://localhost:3000/login.html');
+            await loginUser(page, 'demo@techmart.com', 'demo123');
+            await page.click('button:text("Logout")');
+            await expect(page).toHaveURL('http://localhost:3000');
         });
 
     });
