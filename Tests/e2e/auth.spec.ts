@@ -30,6 +30,12 @@ test.describe("Authentication Tests", () => {
             await expect(page).toHaveURL('http://localhost:3000/register.html');
         });
 
+        test("Failed User Registration with Existing Email", async ({ page }) => {
+            await registerUser(page, 'Jane Doe', 'demo@techmart.com', 'AnotherPass123!');
+            await expect(page).toHaveURL('http://localhost:3000/register.html');
+            await expect(page.locator('.error-message')).toHaveText('Email already registered');
+        });
+
     });
 
 
