@@ -13,43 +13,18 @@ This repository is used to plan, execute, and document professional QA work acro
 
 The goal is to show a complete testing lifecycle with clear artifacts, reproducible steps, and measurable outcomes.
 
-## What I Will Be Doing In This Repo
+## What This Project Demonstrates
 
-### 1. Build and Maintain a Test Strategy
-
-- Define scope, risks, coverage targets, and quality gates
-- Keep the master plan updated as testing progresses
-- Track weekly QA status and execution metrics
-
-Primary document:
-
-- `Testing_Guides/TEST_PLAN.md`
-
-### 2. Execute Manual Testing
-
-- Run test cases for authentication, cart, search/filter, and checkout
-- Document expected vs actual behavior
-- Log defects with reproduction steps and evidence
-
-Primary document:
-
-- `Testing_Guides/MANUAL_TEST_CASES.md`
-
-### 3. Implement and Expand Automation
-
-- Set up Playwright framework and project structure
-- Create page objects, fixtures, and reusable test data
-- Implement regression coverage for critical user journeys
-
-Primary document:
-
-- `Testing_Guides/PLAYWRIGHT_SETUP_GUIDE.md`
-
-### 4. Keep Work Auditable on GitHub
-
-- Use clear commit messages tied to test activity
-- Attach evidence (screenshots/reports/logs)
-- Maintain traceability between test cases, bugs, and commits
+- Risk-based test planning
+- Manual functional testing
+- Playwright E2E automation
+- Page Object Model
+- API validation
+- Test data management
+- Cross-browser testing
+- CI/CD with GitHub Actions
+- Automated test reporting
+- Defect documentation
 
 Quick reference:
 
