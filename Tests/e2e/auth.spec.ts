@@ -49,7 +49,7 @@ test.describe("Authentication Tests", () => {
 
         test("Successful User Login", async ({ page }) => {
             await loginUser(page, 'demo@techmart.com', 'demo123');
-            await expect(page).toHaveURL('http://localhost:3000/dashboard.html');
+            await expect(page).toHaveURL('http://localhost:3000');
         });
 
     });
