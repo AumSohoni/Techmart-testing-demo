@@ -52,6 +52,11 @@ test.describe("Authentication Tests", () => {
             await expect(page).toHaveURL('http://localhost:3000');
         });
 
+        test("Failed User Login with Incorrect Password", async ({ page }) => {
+            await loginUser(page, 'demo@techmart.com', 'wrongpassword');
+            await expect(page).toHaveURL('http://localhost:3000/login.html');
+        });
+
     });
 
 });
