@@ -48,7 +48,7 @@ test.describe("Authentication Tests", () => {
         }
 
         test("Successful User Login", async ({ page }) => {
-            await loginUser(page, 'newuser@techmart.com', 'SecurePass123!');
+            await loginUser(page, 'demo@techmart.com', 'demo123');
             await expect(page).toHaveURL('http://localhost:3000/dashboard.html');
         });
 
