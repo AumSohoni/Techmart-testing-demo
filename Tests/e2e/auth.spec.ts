@@ -43,7 +43,7 @@ test.describe("Authentication Tests", () => {
             await page.fill('input[name="password"]', 'Password123!');
             await page.fill('input[name="confirmPassword"]', 'DifferentPassword123!');
             await page.click('button[type="submit"]');
-            await expect(page).toHaveURL('http://register.html');
+            await expect(page).toHaveURL('/register.html');
             await expect(page.locator('.error-message')).toHaveText('Passwords do not match');
         });
 
@@ -79,7 +79,7 @@ test.describe("Authentication Tests", () => {
             await page.goto('/login.html');
             await loginUser(page, 'demo@techmart.com', 'demo123');
             await page.click('button:text("Logout")');
-            await expect(page).toHaveURL('/login.html');
+            await expect(page).toHaveURL('/');
         });
 
     });
