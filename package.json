@@ -1,6 +1,7 @@
 {
-  "name": "techmart-testing",
+  "name": "techmart-testing-suite",
   "version": "1.0.0",
+  "description": "Playwright and TypeScript QA automation framework for the TechMart demo application",
   "private": true,
   "scripts": {
     "test": "playwright test",
@@ -8,13 +9,15 @@
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
-    "test:auth": "playwright test Tests/e2e/auth",
-    "test:cart": "playwright test Tests/e2e/cart"
+    "test:auth": "playwright test Tests/e2e/auth.spec.ts",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@playwright/test": "^1.62.1",
     "@types/node": "^24.3.0",
-    "playwright": "^1.40.0",
     "typescript": "^5.9.2"
   }
 }
